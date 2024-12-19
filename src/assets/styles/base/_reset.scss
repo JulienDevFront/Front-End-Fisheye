@@ -1,0 +1,13 @@
+@use "../utils/colors.scss" as colors;
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+a,
+button {
+    color: map-get(colors.$mono-chrome, 900);
+    text-decoration: none;
+}

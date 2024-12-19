@@ -31,25 +31,24 @@ export class PhotographerModels {
         this.portrait = portrait;
     }
 
-    static profileCard(profile) {
+    profileCard(profile) {
         const container = document.createElement("article");
+        container.setAttribute("class", "profileCard");
+        container.setAttribute("aria-labelledby", `photographer-${profile.id}`);
         const content = `
-            <img src="./assets/images/pictures/${profile.portrait}" alt="Portrait de ${profile.name}" />
-            <h2>${profile.name}</h2>
-            <p><span>${profile.city}</span>, <span>${profile.country}</span></p>
-            <p>${profile.tagline}</p>
-            <p>${profile.price}€/jour</p>
+            <header class="profileCard__header" role="banner" aria-label="Banner du photographe ${profile.name}">
+                <a href="#" class="profileCard__header__link" aria-label="Voir le profil de ${profile.name}">
+                    <img src="./assets/images/pictures/${profile.portrait}" class="profileCard__header__link__img" alt="Portrait de ${profile.name}"/>
+                    <h2 id="photographer-${profile.id}" class="profileCard__header__link__title">${profile.name}</h2>
+                </a>
+            </header>
+            <footer class="profileCard__footer" role="contentinfo">
+                <p class="profileCard__footer__localize"><span>${profile.city}</span>, <span>${profile.country}</span></p>
+                <p class="profileCard__footer__tagline">${profile.tagline}</p>
+                <p class="profileCard__footer__price">${profile.price}€/jour</p>
+            </footer>
         `;
         container.innerHTML = content;
         return container;
-    }
-
-    static displayCards(container, profiles) {
-        const containerCards = document.querySelector(`${container}`);
-        profiles.forEach((profile) => {
-            const card = PhotographerModels.profileCard(profile);
-            containerCards.appendChild(card);
-        });
-        return containerCards;
     }
 }

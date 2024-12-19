@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <link href="./assets/styles/style.css" rel="stylesheet" type="text/css" />
         <meta charset="utf-8" />
-        <link rel="icon" type="image/png" href="./assets/images/icons/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="./assets/styles/style.css" />
         <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />
+        <link rel="icon" type="image/png" href="./assets/images/icons/favicon.png" />
         <title>Fisheye</title>
     </head>
-    <body>
-        <header>
-            <img src="assets/images/icons/logo.png" class="logo" alt="fisheye logo" />
-            <h1>Nos photographes</h1>
+    <body class="body">
+        <header class="header" role="banner">
+            <a class="header__linkHome" href="./index.html" aria-label="Lien vers la page d'accueil">
+                <img class="header__linkHome__img" src="assets/images/icons/logo.png" alt="Logo de Fisheye, lien vers la page d’accueil" />
+            </a>
+            <h1 class="header__h1">Nos photographes</h1>
         </header>
-        <main id="main">
-            <div class="photographer_section"></div>
+        <main id="main" class="main">
+            <div class="photographer_section" role="search" aria-label="Trouver un photographe"></div>
         </main>
         <script type="module" src="./scripts/pages/home.js"></script>
     </body>

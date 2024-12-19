@@ -1,24 +1,26 @@
 {
-  "name": "front-end-fisheye",
-  "version": "1.0.0",
-  "description": "## Démarrer le projet",
-  "main": "./src/index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JulienDevFront/Front-End-Fisheye.git"
-  },
-  "author": "M.G Julien",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JulienDevFront/Front-End-Fisheye/issues"
-  },
-  "homepage": "https://github.com/JulienDevFront/Front-End-Fisheye#readme",
-  "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "eslint": "^9.17.0",
-    "globals": "^15.13.0"
-  }
+    "name": "front-end-fisheye",
+    "version": "1.0.0",
+    "description": "## Démarrer le projet",
+    "main": "./src/index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass": "sass --watch ./src/assets/styles/main.scss:./src/assets/styles/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JulienDevFront/Front-End-Fisheye.git"
+    },
+    "author": "M.G Julien",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JulienDevFront/Front-End-Fisheye/issues"
+    },
+    "homepage": "https://github.com/JulienDevFront/Front-End-Fisheye#readme",
+    "devDependencies": {
+        "@eslint/js": "^9.17.0",
+        "eslint": "^9.17.0",
+        "globals": "^15.13.0",
+        "sass": "^1.83.0"
+    }
 }
