@@ -5,13 +5,12 @@
  * - - -
  * @param {*} container
  * @param {*} profiles
- * @param {*} model
  * @returns {HTMLElements}
  */
-export const DisplayCards = (container, profiles, model) => {
+export const displayCards = (container, profiles) => {
     const containerCards = document.querySelector(`${container}`);
     profiles.forEach((profile) => {
-        const card = model.profileCard(profile);
+        const card = profile.profileCard();
         containerCards.appendChild(card);
     });
     return containerCards;

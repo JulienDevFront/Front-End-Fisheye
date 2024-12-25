@@ -1,19 +1,19 @@
-import { GetDataPhotographers } from "../services/getDataPhotographers.js";
+import { getData } from "../services/getData.js";
 import { PhotographerModels } from "../models/photographerModels.js";
-import { DisplayCards } from "../interfaces/displayCards.js";
+import { displayCards } from "../interfaces/displayCards.js";
 /** JS.DOC
  *
  */
 async function displayPhotographers() {
     try {
-        const photographers = await GetDataPhotographers("../../api/photographers.json");
-        console.log("Data preview :", photographers);
-        const model = new PhotographerModels();
-        console.log("model preview :", model);
+        const photographersData = await getData("../../api/photographers.json", "photographers");
+        console.log("Data preview :", photographersData);
+        const photographers = photographersData.map((data) => new PhotographerModels(data));
+        console.log("model preview :", photographers);
         if (!Array.isArray(photographers) || photographers.length === 0) {
             return console.error("Aucun photographe trouvé dans les données.");
         }
-        DisplayCards(".photographer_section", photographers, model);
+        displayCards(".photographer_section", photographers);
     } catch (error) {
         console.error("Erreur lors de l'initialisation:", error);
     }
