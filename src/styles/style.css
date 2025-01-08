@@ -1,0 +1,236 @@
+*,
+html {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  border: none;
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.body {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 40px 100px;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__linkHome {
+  height: 100%;
+  cursor: pointer;
+}
+.header__linkHome__img {
+  height: 100%;
+}
+.header__h1 {
+  color: #901c1c;
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+.mainPhotographerProfiles {
+  width: 100%;
+  height: auto;
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.photographerProfileCard {
+  width: 100%;
+  margin-bottom: 80px;
+}
+.photographerProfileCard__header {
+  width: 100%;
+}
+.photographerProfileCard__header__link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.photographerProfileCard__header__link__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+.photographerProfileCard__header__link__title {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #d3573c;
+}
+.photographerProfileCard__footer {
+  text-align: center;
+}
+.photographerProfileCard__footer__localize {
+  color: #901c1c;
+}
+.photographerProfileCard__footer__tagline {
+  margin-top: 3px;
+  color: #000000;
+}
+.photographerProfileCard__footer__price {
+  margin-top: 3px;
+  color: #757575;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+.photogapherProfileBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+.photogapherProfileBanner__ctn-txt__title {
+  font-size: 64px;
+  font-weight: 400;
+  color: #d3573c;
+}
+.photogapherProfileBanner__ctn-txt__localize {
+  margin-top: 1rem;
+  font-size: 24px;
+  color: #901c1c;
+}
+.photogapherProfileBanner__ctn-txt__tagline {
+  margin-top: 19px;
+  font-size: 18px;
+  color: #525252;
+}
+.photogapherProfileBanner__ctn-img {
+  margin: 56px 0px 57px 0px;
+}
+.photogapherProfileBanner__ctn-img__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.PhotographerContactForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 15px 35px 40px 35px;
+  border-radius: 5px;
+  background-color: #db8876;
+  box-shadow: -5px 10px 30px 0px rgba(0, 0, 0, 0.25);
+}
+.PhotographerContactForm__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.PhotographerContactForm__header__title {
+  display: flex;
+  flex-direction: column;
+  font-size: 64px;
+  font-weight: 400;
+}
+.PhotographerContactForm__form__fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.label-txt {
+  color: #312e2e;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.input-txt {
+  width: 600px;
+  height: 70px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.input-txt:focus {
+  outline: 4px solid #901c1c;
+}
+
+.input-textarea {
+  width: 600px;
+  height: 170px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.input-textarea:focus {
+  outline: 4px solid #901c1c;
+}
+
+.button--openModal {
+  padding: 24px 20px;
+  border-radius: 5px;
+  background-color: #901c1c;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+}
+.button--openModal:hover {
+  background-color: #d3573c;
+  color: #000000;
+}
+
+.button--closeModal {
+  position: relative;
+  background-color: transparent;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.button--closeModal::before, .button--closeModal::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 100%;
+  height: 0.5rem;
+  background-color: #ffffff;
+}
+.button--closeModal::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.button--submitModal {
+  width: 170px;
+  height: 70px;
+  margin-top: 25px;
+  border-radius: 5px;
+  background-color: #901c1c;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.button--submitModal:hover {
+  border: 4px solid #901c1c;
+  background-color: #d3573c;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,16 @@
+@use "../utils/colors.scss" as colors;
+@use "sass:map";
+
+.button--openModal {
+    padding: 24px 20px;
+    border-radius: 5px;
+    background-color: map.get(colors.$colors, primary);
+    text-align: center;
+    font-weight: 700;
+    color: map.get(colors.$mono-chrome, 100);
+
+    &:hover {
+        background-color: map.get(colors.$colors, secondary);
+        color: map.get(colors.$mono-chrome, 900);
+    }
+}

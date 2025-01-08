@@ -5,7 +5,7 @@
     "main": "./src/index.html",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "sass": "sass --watch ./src/assets/styles/main.scss:./src/assets/styles/style.css"
+        "sass": "sass --watch ./src/styles/main.scss:./src/styles/style.css"
     },
     "repository": {
         "type": "git",

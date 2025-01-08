@@ -1,6 +1,7 @@
 import { getData } from "../services/getData.js";
-import { displayBanner } from "../interfaces/displayBanner.js";
 import { PhotographerModels } from "../models/photographerModels.js";
+import { displayBannerPhotographer } from "../interfaces/displayBannerPhotographer.js";
+import { displayModalPhotographerContact } from "../interfaces/displayModalPhotographerContact.js";
 
 async function displayProfileBanner() {
     const photographersData = await getData("../../api/photographers.json", "photographers");
@@ -14,6 +15,9 @@ async function displayProfileBanner() {
     console.log("data profile :", photographerData);
 
     const photographer = new PhotographerModels(photographerData);
-    displayBanner(".header", photographer);
+    displayBannerPhotographer(".main", photographer);
+    photographer.contactForm();
+    displayModalPhotographerContact();
 }
+
 displayProfileBanner();

@@ -1,13 +1,13 @@
 /** JS.DOC
  * - - -
- * @function displayCards
+ * @function displayPhotographersProfileCards
  * @description
  * - - -
  * @param {*} container
  * @param {*} profiles
  * @returns {HTMLElements}
  */
-export const displayCards = (container, profiles) => {
+export const displayPhotographersProfileCards = (container, profiles) => {
     const containerCards = document.querySelector(`${container}`);
     profiles.forEach((profile) => {
         const card = profile.profileCard();

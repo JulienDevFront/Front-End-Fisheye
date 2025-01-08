@@ -1,6 +1,10 @@
+// import
 @use "../utils/colors.scss" as colors;
 @use "../utils/sizes.scss" as size;
+@use "sass:map";
+// - - -
 
+// header global for app
 .header {
     width: 100%;
     height: 50px;
@@ -9,13 +13,15 @@
     justify-content: space-between;
     &__linkHome {
         height: 100%;
+        cursor: pointer;
         &__img {
             height: 100%;
         }
     }
     &__h1 {
-        color: map-get(colors.$colors, primary);
-        font-size: map-get(size.$title, h2);
+        color: map.get(colors.$colors, primary);
+        font-size: map.get(size.$title, h1);
         font-weight: 400;
     }
 }
+// - - -

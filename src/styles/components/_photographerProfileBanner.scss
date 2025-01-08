@@ -1,0 +1,43 @@
+// import
+@use "../utils/colors.scss" as colors;
+@use "../utils/sizes.scss" as size;
+@use "../utils/shadow.scss" as shadow;
+@use "sass:map";
+
+// banner of photographers profile genrate dynamic in Javascript
+.photogapherProfileBanner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    border-radius: 5px;
+    background-color: map.get(colors.$mono-chrome, 300);
+
+    &__ctn-txt {
+        &__title {
+            font-size: 64px;
+            font-weight: 400;
+            color: map.get(colors.$colors, secondary);
+        }
+        &__localize {
+            margin-top: 1rem;
+            font-size: 24px;
+            color: map.get(colors.$colors, primary);
+        }
+        &__tagline {
+            margin-top: 19px;
+            font-size: 18px;
+            color: map.get(colors.$mono-chrome, 700);
+        }
+    }
+
+    &__ctn-img {
+        margin: 56px 0px 57px 0px;
+        &__img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            @include shadow.box-shadow;
+        }
+    }
+}

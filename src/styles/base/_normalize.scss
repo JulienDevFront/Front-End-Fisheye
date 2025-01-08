@@ -1,0 +1,14 @@
+// import
+@use "./fonts.scss" as fonts;
+// - - -
+
+// normalize bloc and inline for app
+*,
+html {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    border: none;
+    @include fonts.DMsans;
+}
+// - - -

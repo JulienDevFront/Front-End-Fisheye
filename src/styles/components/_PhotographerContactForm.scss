@@ -1,0 +1,61 @@
+@use "../utils/sizes.scss" as sizes;
+@use "../utils/colors.scss" as colors;
+@use "sass:map";
+
+//
+.PhotographerContactForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 15px 35px 40px 35px;
+    border-radius: 5px;
+    background-color: map.get(colors.$colors, tertiary);
+    box-shadow: -5px 10px 30px 0px rgba(map.get(colors.$mono-chrome, 900), 0.25);
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        &__title {
+            display: flex;
+            flex-direction: column;
+            font-size: 64px;
+            font-weight: 400;
+        }
+        // component import in pages folder : "button--closeModal"
+    }
+    &__form {
+        &__fieldset {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+//
+.label-txt {
+    color: map.get(colors.$mono-chrome, 800);
+    font-size: 36px;
+    font-weight: 400;
+}
+.input-txt {
+    width: 600px;
+    height: 70px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: map.get(colors.$mono-chrome, 100);
+    &:focus {
+        outline: 4px solid map.get(colors.$colors, primary);
+    }
+}
+.input-textarea {
+    width: 600px;
+    height: 170px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: map.get(colors.$mono-chrome, 100);
+    &:focus {
+        outline: 4px solid map.get(colors.$colors, primary);
+    }
+}

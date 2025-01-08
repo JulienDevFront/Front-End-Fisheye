@@ -1,6 +1,6 @@
 import { getData } from "../services/getData.js";
 import { PhotographerModels } from "../models/photographerModels.js";
-import { displayCards } from "../interfaces/displayCards.js";
+import { displayPhotographersProfileCards } from "../interfaces/displayPhotographersProfileCards.js.js";
 /** JS.DOC
  *
  */
@@ -13,7 +13,7 @@ async function displayPhotographers() {
         if (!Array.isArray(photographers) || photographers.length === 0) {
             return console.error("Aucun photographe trouvé dans les données.");
         }
-        displayCards(".photographer_section", photographers);
+        displayPhotographersProfileCards(".mainPhotographerProfiles", photographers);
     } catch (error) {
         console.error("Erreur lors de l'initialisation:", error);
     }

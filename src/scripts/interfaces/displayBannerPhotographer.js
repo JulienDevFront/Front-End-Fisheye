@@ -1,6 +1,6 @@
 /** JS.DOC
  * - - -
- * @function displayBanner
+ * @function displayBannerPhotographer
  * @description
  * - - -
  * @param {*} container
@@ -8,9 +8,9 @@
  * @param {*} model
  * @returns {HTMLElements}
  */
-export const displayBanner = (container, model) => {
+export const displayBannerPhotographer = (container, model) => {
     const containerBanner = document.querySelector(`${container}`);
-    const banner = model.profileBanner();
+    const banner = model.photogapherProfileBanner();
     containerBanner.appendChild(banner);
 
     return containerBanner;

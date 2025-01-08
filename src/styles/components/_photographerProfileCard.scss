@@ -1,17 +1,12 @@
+// import
 @use "../utils/colors.scss" as colors;
 @use "../utils/sizes.scss" as size;
 @use "../utils/shadow.scss" as shadow;
+@use "sass:map";
+// - - -
 
-.photographer_section {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.profileCard {
+// photographer profile card component
+.photographerProfileCard {
     width: 100%;
     margin-bottom: 80px;
     &__header {
@@ -26,29 +21,30 @@
                 width: 200px;
                 height: 200px;
                 border-radius: 50%;
-                @include shadow.box-shadow-profile-card;
+                @include shadow.box-shadow;
             }
             &__title {
                 margin-top: 20px;
                 text-align: center;
-                font-size: map-get(size.$title, h2);
+                font-size: map.get(size.$title, h2);
                 font-weight: 400;
-                color: map-get(colors.$colors, secondary);
+                color: map.get(colors.$colors, secondary);
             }
         }
     }
     &__footer {
         text-align: center;
         &__localize {
-            color: map-get(colors.$colors, primary);
+            color: map.get(colors.$colors, primary);
         }
         &__tagline {
             margin-top: 3px;
-            color: map-get(colors.$mono-chrome, 900);
+            color: map.get(colors.$mono-chrome, 900);
         }
         &__price {
             margin-top: 3px;
-            color: map-get(colors.$mono-chrome, 500);
+            color: map.get(colors.$mono-chrome, 500);
         }
     }
 }
+// - - -

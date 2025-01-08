@@ -34,43 +34,80 @@ export class PhotographerModels {
 
     profileCard() {
         const container = document.createElement("article");
-        container.setAttribute("class", "profileCard");
+        container.setAttribute("class", "photographerProfileCard");
         container.setAttribute("aria-labelledby", `photographer-${this.id}`);
         const content = `
-            <header class="profileCard__header" role="banner" aria-label="Banner du photographe ${this.name}">
-                <a href="./photographer.html?id=${this.id}" class="profileCard__header__link" aria-label="Voir le profil de ${this.name}">
-                    <img src="./assets/images/pictures/${this.portrait}" class="profileCard__header__link__img" alt="Portrait de ${this.name}"/>
-                    <h2 id="photographer-${this.id}" class="profileCard__header__link__title">${this.name}</h2>
+            <header class="photographerProfileCard__header" role="banner" aria-label="Banner du photographe ${this.name}">
+                <a href="./photographer.html?id=${this.id}" class="photographerProfileCard__header__link" aria-label="Voir le profil de ${this.name}">
+                    <img src="./assets/pictures/${this.portrait}" class="photographerProfileCard__header__link__img" alt="Portrait de ${this.name}"/>
+                    <h2 id="photographer-${this.id}" class="photographerProfileCard__header__link__title">${this.name}</h2>
                 </a>
             </header>
-            <footer class="profileCard__footer" role="contentinfo">
-                <p class="profileCard__footer__localize"><span>${this.city}</span>, <span>${this.country}</span></p>
-                <p class="profileCard__footer__tagline">${this.tagline}</p>
-                <p class="profileCard__footer__price">${this.price}€/jour</p>
+            <footer class="photographerProfileCard__footer" role="contentinfo">
+                <p class="photographerProfileCard__footer__localize"><span>${this.city}</span>, <span>${this.country}</span></p>
+                <p class="photographerProfileCard__footer__tagline">${this.tagline}</p>
+                <p class="photographerProfileCard__footer__price">${this.price}€/jour</p>
             </footer>
         `;
         container.innerHTML = content;
         return container;
     }
 
-    profileBanner() {
-        const container = document.createElement("section");
-        container.setAttribute("class", "section-profileBanner");
-        container.setAttribute("role", "contentinfo");
+    photogapherProfileBanner() {
+        const container = document.querySelector(".photogapherProfileBanner");
         container.setAttribute("aria-label", `Informations de ${this.name}`);
         const content = `
-            <div>
-                <h1>${this.name}</h1>
-                <p class=""><span>${this.city}</span>, <span>${this.country}</span></p>
-                <p>${this.tagline}</p>
+            <div class="photogapherProfileBanner__ctn-txt">
+                <h1 class="photogapherProfileBanner__ctn-txt__title">${this.name}</h1>
+                <p class="photogapherProfileBanner__ctn-txt__localize"><span>${this.city}</span>, <span>${this.country}</span></p>
+                <p class="photogapherProfileBanner__ctn-txt__tagline">${this.tagline}</p>
             </div>
-            <div>
-                <button>Contactez-moi</button>
+            <div class="photogapherProfileBanner__ctn-btn">
+                <button class="button--openModal">Contactez-moi</button>
             </div>
-            <div>
-                <img src="./assets/images/pictures/${this.portrait}" class="" alt="Portrait de ${this.name}"/>
+            <div class="photogapherProfileBanner__ctn-img">
+                <img class="photogapherProfileBanner__ctn-img__img" src="./assets/pictures/${this.portrait}" alt="Portrait de ${this.name}"/>
             </div>
         `;
+        container.innerHTML = content;
+        return container;
+    }
+
+    contactForm() {
+        const container = document.querySelector("#PhotographerContactForm");
+        container.setAttribute("aria-label", `Contactez ${this.name}`);
+
+        const content = `
+        <header class="PhotographerContactForm__header">
+                <h2 class="PhotographerContactForm__header__title">
+                    <span class="PhotographerContactForm__header__title__txt">Contactez-moi</span>
+                    <span class="PhotographerContactForm__header__title__txt">${this.name}</span>
+                </h2>
+                <button class="button--closeModal"></button>
+            </header>
+            <form class="PhotographerContactForm__form">
+                <fieldset class="PhotographerContactForm__form__fieldset">
+                    <label class="label-txt" for="name">Prénom</label>
+                    <input class="input-txt" type="text" name="name" placeholder="Julie, Jean .." />
+                </fieldset>
+                <fieldset class="PhotographerContactForm__form__fieldset">
+                    <label class="label-txt" for="lastName">Nom</label>
+                    <input class="input-txt" type="text" name="lastName" placeholder="Garnier, Dubois .." />
+                </fieldset>
+                <fieldset class="PhotographerContactForm__form__fieldset">
+                    <label class="label-txt" for="email">Email</label>
+                    <input class="input-txt" type="email" name="email" placeholder="mon.adresse@gmail.com" />
+                </fieldset>
+                <fieldset class="PhotographerContactForm__form__fieldset">
+                    <label class="label-txt" for="message">Votre message</label>
+                    <textarea class="input-textarea" type="text-area" name="message" placeholder="Saisissez votre message .."></textarea>
+                </fieldset>
+                <fieldset class="PhotographerContactForm__form__fieldset">
+                    <input class="button--submitModal" type="submit" />
+                </fieldset>
+            </form>
+            `;
+
         container.innerHTML = content;
         return container;
     }

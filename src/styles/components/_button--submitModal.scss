@@ -1,0 +1,19 @@
+@use "../utils/colors.scss" as colors;
+@use "sass:map";
+
+.button--submitModal {
+    width: 170px;
+    height: 70px;
+    margin-top: 25px;
+    border-radius: 5px;
+    background-color: map.get(colors.$colors, primary);
+    color: map.get(colors.$mono-chrome, 100);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+
+    &:hover {
+        border: 4px solid map.get(colors.$colors, primary);
+        background-color: map.get(colors.$colors, secondary);
+    }
+}
