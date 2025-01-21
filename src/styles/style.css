@@ -12,6 +12,7 @@ html {
 
 .body {
   position: relative;
+  max-width: 1440px;
   width: 100%;
   height: auto;
   padding: 40px 100px;
@@ -231,6 +232,112 @@ html {
 .button--submitModal:hover {
   border: 4px solid #901c1c;
   background-color: #d3573c;
+}
+
+.mediaOption {
+  display: flex;
+  margin-top: 20px;
+}
+.mediaOption__label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+.mediaOption__select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  background-color: #901c1c;
+}
+.mediaOption__select__ctn-icon {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  animation: transform 200ms ease-in-out;
+}
+.mediaOption__select__ctn-icon__icon {
+  border-radius: 5px;
+}
+.mediaOption__select__ctn-icon:hover {
+  transform: rotate(180deg);
+}
+.mediaOption__select__option {
+  width: 170px;
+  height: 70px;
+  padding-left: 20px;
+  background-color: transparent;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.media {
+  width: 100%;
+  height: auto;
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.mediaCard {
+  width: 350px;
+  height: auto;
+}
+.mediaCard__header {
+  width: 100%;
+  height: auto;
+}
+.mediaCard__header__link {
+  width: 100%;
+  height: 300px;
+}
+.mediaCard__header__link__media--img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.mediaCard__header__link__media--video {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.mediaCard__footer {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.mediaCard__footer__title {
+  color: #901c1c;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.mediaCard__footer__likes {
+  display: flex;
+  font-size: 24px;
+  font-weight: 400;
+}
+.mediaCard__footer__likes__number {
+  color: #901c1c;
+  margin-right: 4px;
+  font-weight: 500;
+}
+.mediaCard__footer__likes__img {
+  width: 21px;
+  height: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

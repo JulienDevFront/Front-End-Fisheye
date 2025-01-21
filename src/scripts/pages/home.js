@@ -1,6 +1,6 @@
 import { getData } from "../services/getData.js";
 import { PhotographerModels } from "../models/photographerModels.js";
-import { displayPhotographersProfileCards } from "../interfaces/displayPhotographersProfileCards.js.js";
+import { displayPhotographersProfileCards } from "../interfaces/displayPhotographersProfileCards.js";
 /** JS.DOC
  *
  */

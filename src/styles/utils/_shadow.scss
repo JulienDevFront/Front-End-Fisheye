@@ -1,10 +1,6 @@
-// import
 @use "../utils/colors.scss" as colors;
 @use "sass:map";
-// - - -
 
-// box-shadow
 @mixin box-shadow {
     box-shadow: 0px 4px 12px rgba(map.get(colors.$mono-chrome, 900), 0.25);
 }
-// - - -

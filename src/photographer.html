@@ -22,10 +22,50 @@
         </header>
         <!-- main -->
         <main class="main">
-            <section class="photogapherProfileBanner" role="contentinfo"><!-- content genrate with Javascript --></section>
-            <!-- <section>Trier par</section> -->
+            <section class="photogapherProfileBanner" role="contentinfo"></section>
+            <section class="mediaOption">
+                <h3 class="mediaOption__label" for="sort">Trier par</h3>
+                <div class="mediaOption__select" id="sort" name="sort">
+                    <div class="mediaOption__select__ctn-icon">
+                        <img class="mediaOption__select__ctn-icon__icon" src="./assets/icons/arrowDropDown.png" />
+                    </div>
+                    <button class="mediaOption__select__option" id="popularityOption" data-sort-name="popularity">Popularité</button>
+                    <button class="mediaOption__select__option" id="dateOption" data-sort-name="date">Date</button>
+                    <button class="mediaOption__select__option" id="titleOption" data-sort-name="title">Titre</button>
+                </div>
+            </section>
+            <section class="media"></section>
         </main>
-        <aside id="PhotographerContactForm" class="PhotographerContactForm" role="dialog"><!-- content genrate with Javascript --></aside>
+        <aside id="PhotographerContactForm" class="PhotographerContactForm" role="dialog">
+            <header class="PhotographerContactForm__header">
+                <h2 class="PhotographerContactForm__header__title">
+                    <span class="PhotographerContactForm__header__title__txt">Contactez-moi</span>
+                    <span id="nameProfilePhotographer" class="PhotographerContactForm__header__title__txt"></span>
+                </h2>
+                <button class="button--closeModal"></button>
+            </header>
+            <form class="PhotographerContactForm__form">
+                <fieldset class="PhotographerContactForm__form__fieldset">
+                    <label class="label-txt" for="name">Prénom</label>
+                    <input class="input-txt" type="text" name="name" placeholder="Julie, Jean .." />
+                </fieldset>
+                <fieldset class="PhotographerContactForm__form__fieldset">
+                    <label class="label-txt" for="lastName">Nom</label>
+                    <input class="input-txt" type="text" name="lastName" placeholder="Garnier, Dubois .." />
+                </fieldset>
+                <fieldset class="PhotographerContactForm__form__fieldset">
+                    <label class="label-txt" for="email">Email</label>
+                    <input class="input-txt" type="email" name="email" placeholder="mon.adresse@gmail.com" />
+                </fieldset>
+                <fieldset class="PhotographerContactForm__form__fieldset">
+                    <label class="label-txt" for="message">Votre message</label>
+                    <textarea class="input-textarea" type="text-area" name="message" placeholder="Saisissez votre message .."></textarea>
+                </fieldset>
+                <fieldset class="PhotographerContactForm__form__fieldset">
+                    <input class="button--submitModal" type="submit" />
+                </fieldset>
+            </form>
+        </aside>
         <script type="module" src="./scripts/pages/photographer.js" defer></script>
     </body>
 </html>

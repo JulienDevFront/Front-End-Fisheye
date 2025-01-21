@@ -8,10 +8,11 @@
  * @param {*} model
  * @returns {HTMLElements}
  */
-export const displayBannerPhotographer = (container, model) => {
-    const containerBanner = document.querySelector(`${container}`);
-    const banner = model.photogapherProfileBanner();
-    containerBanner.appendChild(banner);
+import { getPhotographerProfile } from "../services/getPhotographerProfile.js";
+import { PhotographerModels } from "../models/photographerModels.js";
 
-    return containerBanner;
+export const displayBannerPhotographer = async () => {
+    const profileData = await getPhotographerProfile();
+    const banner = new PhotographerModels(profileData).photogapherProfileBanner();
+    return banner;
 };

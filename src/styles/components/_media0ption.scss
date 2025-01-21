@@ -1,0 +1,46 @@
+@use "../utils/colors.scss" as colors;
+@use "sass:map";
+
+.mediaOption {
+    display: flex;
+    margin-top: 20px;
+    &__label {
+        font-size: 18px;
+        font-weight: 700;
+        color: map.get(colors.$mono-chrome, 900);
+    }
+    &__select {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+        padding: 0px 10px;
+        border-radius: 5px;
+        background-color: map.get(colors.$colors, primary);
+
+        &__ctn-icon {
+            position: absolute;
+            top: 18px;
+            right: 10px;
+            animation: transform 200ms ease-in-out;
+            &__icon {
+                border-radius: 5px;
+            }
+        }
+        &__ctn-icon:hover {
+            transform: rotate(180deg);
+        }
+
+        &__option {
+            width: 170px;
+            height: 70px;
+            padding-left: 20px;
+            background-color: transparent;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 700;
+            color: map.get(colors.$mono-chrome, 100);
+            border-bottom: 1px solid map.get(colors.$mono-chrome, 100);
+        }
+    }
+}

@@ -1,11 +1,8 @@
-// import
 @use "../utils/colors.scss" as colors;
 @use "../utils/sizes.scss" as size;
 @use "../utils/shadow.scss" as shadow;
 @use "sass:map";
-// - - -
 
-// photographer profile card component
 .photographerProfileCard {
     width: 100%;
     margin-bottom: 80px;
@@ -47,4 +44,3 @@
         }
     }
 }
-// - - -
