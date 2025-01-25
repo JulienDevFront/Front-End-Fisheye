@@ -2,6 +2,7 @@
 @use "../layouts/body.scss";
 @use "../layouts/header.scss";
 @use "../layouts/main.scss";
+@use "../layouts/footerBannerInfos.scss";
 // - - -
 
 // import components
@@ -13,4 +14,6 @@
 @use "../components/media0ption.scss";
 @use "../components/media.scss";
 @use "../components/mediaCard.scss";
+@use "../components/lightBox.scss";
+@use "../components/button--lightBox.scss";
 // - - -

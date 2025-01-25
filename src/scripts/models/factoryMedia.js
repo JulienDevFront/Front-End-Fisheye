@@ -1,7 +1,7 @@
 import { ImageMedia } from "./imageMedia.js";
 import { VideoMedia } from "./videoMedia.js";
 
-export class factoryMedia {
+export class FactoryMedia {
     constructor(data) {
         if (data.image) {
             return new ImageMedia(data);

@@ -10,6 +10,19 @@ html {
   text-decoration: none;
 }
 
+button {
+  margin: 0%;
+  padding: 0%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
 .body {
   position: relative;
   max-width: 1440px;
@@ -94,6 +107,37 @@ html {
   width: 100%;
   height: auto;
   margin-top: 40px;
+}
+
+.footerBannerInfos {
+  position: fixed;
+  bottom: 0%;
+  right: 36px;
+  display: flex;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #db8876;
+}
+.footerBannerInfos__ctn-likes {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+}
+.footerBannerInfos__ctn-likes__number {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+}
+.footerBannerInfos__ctn-likes__icon {
+  margin-left: 5px;
+}
+.footerBannerInfos__ctn-price {
+  padding: 20px 30px;
+}
+.footerBannerInfos__ctn-price__price, .footerBannerInfos__ctn-price__txt {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
 }
 
 .photogapherProfileBanner {
@@ -195,6 +239,7 @@ html {
 .button--openModal:hover {
   background-color: #d3573c;
   color: #000000;
+  cursor: pointer;
 }
 
 .button--closeModal {
@@ -235,6 +280,8 @@ html {
 }
 
 .mediaOption {
+  width: 25%;
+  position: relative;
   display: flex;
   margin-top: 20px;
 }
@@ -244,7 +291,9 @@ html {
   color: #000000;
 }
 .mediaOption__select {
-  position: relative;
+  position: absolute;
+  top: 0%;
+  right: 0%;
   display: flex;
   flex-direction: column;
   margin-left: 25px;
@@ -313,7 +362,7 @@ html {
 .mediaCard__footer {
   width: 100%;
   height: 30px;
-  margin-top: 10px;
+  margin: 10px 0px 30px 0px;
   display: flex;
   justify-content: space-between;
 }
@@ -338,6 +387,80 @@ html {
 .mediaCard__footer__likes__img {
   width: 21px;
   height: 14px;
+}
+
+.lightBox {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1111;
+  width: 100%;
+  height: 100vh;
+  padding: 60px 100px 20px 100px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.lightBox__ctn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0px 96px;
+}
+.lightBox__ctn__ctn-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.lightBox__ctn__ctn-slides__slide {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 90%;
+}
+.lightBox__ctn__ctn-slides__slide__media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+.lightBox__ctn__ctn-slides__slide__title {
+  margin-top: 12px;
+  font-size: 24px;
+  color: #901c1c;
+}
+
+.lightBox__ctn-btn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.button--closeLightBox {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+}
+
+.button--prevLightBox {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+}
+
+.button--nextLightBox {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+}
+
+.button--lightBox {
+  width: 96px;
+  height: 96px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

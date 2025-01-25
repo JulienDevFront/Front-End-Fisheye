@@ -2,6 +2,8 @@
 @use "sass:map";
 
 .mediaOption {
+    width: 25%;
+    position: relative;
     display: flex;
     margin-top: 20px;
     &__label {
@@ -10,7 +12,9 @@
         color: map.get(colors.$mono-chrome, 900);
     }
     &__select {
-        position: relative;
+        position: absolute;
+        top: 0%;
+        right: 0%;
         display: flex;
         flex-direction: column;
         margin-left: 25px;

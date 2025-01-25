@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,6 +36,7 @@
             </section>
             <section class="media"></section>
         </main>
+        <!-- modal contact -->
         <aside id="PhotographerContactForm" class="PhotographerContactForm" role="dialog">
             <header class="PhotographerContactForm__header">
                 <h2 class="PhotographerContactForm__header__title">
@@ -66,6 +67,28 @@
                 </fieldset>
             </form>
         </aside>
+        <!-- lightBox -->
+        <aside id="lightBox" class="lightBox">
+            <div class="lightBox__ctn">
+                <button class="button--lightBox button--closeLightBox"><img src="./assets/icons/closeModalLightBox.svg" alt="#" /></button>
+                <button class="button--lightBox button--prevLightBox"><img src="./assets/icons/arrowPrevLightBox.svg" alt="#" /></button>
+                <button class="button--lightBox button--nextLightBox"><img src="./assets/icons/arrowNextLightBox.svg" alt="#" /></button>
+                <ul class="lightBox__ctn__ctn-slides">
+                    <!-- medias genrate with design pattern Javascript -->
+                </ul>
+            </div>
+        </aside>
+        <!-- footer -->
+        <footer class="footerBannerInfos">
+            <p class="footerBannerInfos__ctn-likes">
+                <span id="footerBannerInfos__ctn-likes__number" class="footerBannerInfos__ctn-likes__number"><!-- generate with Javascript --></span>
+                <img class="footerBannerInfos__ctn-likes__icon" src="./assets/icons/numberLikes.svg" alt="Icon like" />
+            </p>
+            <p class="footerBannerInfos__ctn-price">
+                <span id="footerBannerInfos__ctn-price__price" class="footerBannerInfos__ctn-price__price"><!-- generate with Javascript --></span>
+                <span class="footerBannerInfos__ctn-price__txt">€ / jour</span>
+            </p>
+        </footer>
         <script type="module" src="./scripts/pages/photographer.js" defer></script>
     </body>
 </html>

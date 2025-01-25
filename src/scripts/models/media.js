@@ -11,4 +11,8 @@ export class Media {
     getCard() {
         return null;
     }
+
+    carrouselCard() {
+        return null;
+    }
 }

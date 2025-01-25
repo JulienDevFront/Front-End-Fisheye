@@ -12,3 +12,17 @@ html {
     @include fonts.DMsans;
 }
 // - - -
+
+// button config base
+button {
+    margin: 0%;
+    padding: 0%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+// - - -
+li {
+    list-style: none;
+    text-decoration: none;
+}

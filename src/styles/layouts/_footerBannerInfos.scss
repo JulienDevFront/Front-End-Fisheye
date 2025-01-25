@@ -1,0 +1,35 @@
+@use "../utils/colors.scss" as colors;
+@use "sass:map";
+
+.footerBannerInfos {
+    position: fixed;
+    bottom: 0%;
+    right: 36px;
+    display: flex;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: map.get(colors.$colors, tertiary);
+    &__ctn-likes {
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        &__number {
+            font-size: 24px;
+            font-weight: 500;
+            color: map.get(colors.$mono-chrome, 900);
+        }
+        &__icon {
+            margin-left: 5px;
+        }
+    }
+
+    &__ctn-price {
+        padding: 20px 30px;
+        &__price,
+        &__txt {
+            font-size: 24px;
+            font-weight: 500;
+            color: map.get(colors.$mono-chrome, 900);
+        }
+    }
+}
