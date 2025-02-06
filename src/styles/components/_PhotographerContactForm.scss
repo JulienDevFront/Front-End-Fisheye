@@ -2,16 +2,20 @@
 @use "../utils/colors.scss" as colors;
 @use "sass:map";
 
+#PhotographerContactForm {
+    display: none;
+}
 //
 .PhotographerContactForm {
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 5%;
     left: 50%;
     transform: translate(-50%);
     padding: 15px 35px 40px 35px;
     border-radius: 5px;
     background-color: map.get(colors.$colors, tertiary);
     box-shadow: -5px 10px 30px 0px rgba(map.get(colors.$mono-chrome, 900), 0.25);
+    z-index: 2222;
     &__header {
         display: flex;
         justify-content: space-between;

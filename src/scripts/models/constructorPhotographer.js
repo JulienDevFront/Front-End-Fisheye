@@ -1,27 +1,11 @@
-/** JS.DOC
+/** JS.DOC =>
  * - - -
- * @class PhotographerTemplate
+ * @module ConstructorPhotographer @type {class}
+ * - - -
  * @description Represents for photographers design pattern with
  * data and  a method  to generate  their card HTML  of  profil.
- * - - -
- * @constructor
- * @params
- * @key {number} id
- * @key {string} name
- * @key {string} city
- * @key {string} country
- * @key {string} tagline
- * @key {number} price
- * @key {string} portrait
- * - - -
- * @method profileCard()
- * @return {HTMLElement}
- * - - -
- * @method displayCards()
- * @param {container, profiles}
- * @return {HTMLElements}
  */
-export class PhotographerModels {
+export class ConstructorPhotographer {
     constructor({ name, id, city, country, tagline, price, portrait }) {
         this.id = id;
         this.name = name;
@@ -53,7 +37,7 @@ export class PhotographerModels {
         return container;
     }
 
-    photogapherProfileBanner() {
+    profileBanner() {
         const container = document.querySelector(".photogapherProfileBanner");
         container.setAttribute("aria-label", `Informations de ${this.name}`);
         const content = `

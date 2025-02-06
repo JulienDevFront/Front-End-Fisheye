@@ -6,6 +6,7 @@
     position: relative;
     display: flex;
     margin-top: 20px;
+    z-index: 1111;
     &__label {
         font-size: 18px;
         font-weight: 700;
@@ -44,6 +45,9 @@
             font-size: 18px;
             font-weight: 700;
             color: map.get(colors.$mono-chrome, 100);
+        }
+        &__option:nth-child(3) {
+            border-top: 1px solid map.get(colors.$mono-chrome, 100);
             border-bottom: 1px solid map.get(colors.$mono-chrome, 100);
         }
     }

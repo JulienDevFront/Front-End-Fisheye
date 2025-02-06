@@ -12,6 +12,7 @@
     padding: 60px 100px 20px 100px;
     overflow: hidden;
     background-color: map.get(colors.$mono-chrome, 100);
+    display: none;
 
     &__ctn {
         position: relative;
