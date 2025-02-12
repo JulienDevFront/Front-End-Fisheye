@@ -3,7 +3,8 @@
 @use "sass:map";
 
 .lightBox {
-    position: absolute;
+    display: none;
+    position: fixed;
     top: 0%;
     left: 0%;
     z-index: 1111;
@@ -12,7 +13,6 @@
     padding: 60px 100px 20px 100px;
     overflow: hidden;
     background-color: map.get(colors.$mono-chrome, 100);
-    display: none;
 
     &__ctn {
         position: relative;

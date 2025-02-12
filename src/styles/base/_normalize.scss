@@ -1,10 +1,12 @@
 // import
 @use "./fonts.scss" as fonts;
+@use "../utils/colors.scss" as colors;
 // - - -
 
 // normalize bloc and inline for app
 *,
-html {
+html,
+body {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -19,7 +21,10 @@ button {
     padding: 0%;
     border: none;
     background-color: transparent;
-    outline: none;
+    outline: 2px solid transparent;
+}
+button:focus {
+    outline: 2px solid rgb(0, 162, 255);
 }
 // - - -
 li {

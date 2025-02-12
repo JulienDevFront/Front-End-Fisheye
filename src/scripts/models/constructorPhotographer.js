@@ -23,7 +23,7 @@ export class ConstructorPhotographer {
         const content = `
             <header class="photographerProfileCard__header" role="banner" aria-label="Banner du photographe ${this.name}">
                 <a href="./photographer.html?id=${this.id}" class="photographerProfileCard__header__link" aria-label="Voir le profil de ${this.name}">
-                    <img src="./assets/pictures/${this.portrait}" class="photographerProfileCard__header__link__img" alt="Portrait de ${this.name}"/>
+                    <img src="./src/assets/pictures/${this.portrait}" class="photographerProfileCard__header__link__img" alt="Portrait de ${this.name}"/>
                     <h2 id="photographer-${this.id}" class="photographerProfileCard__header__link__title">${this.name}</h2>
                 </a>
             </header>
@@ -50,7 +50,7 @@ export class ConstructorPhotographer {
                 <button class="button--openModal">Contactez-moi</button>
             </div>
             <div class="photogapherProfileBanner__ctn-img">
-                <img class="photogapherProfileBanner__ctn-img__img" src="./assets/pictures/${this.portrait}" alt="Portrait de ${this.name}"/>
+                <img class="photogapherProfileBanner__ctn-img__img" src="./src/assets/pictures/${this.portrait}" alt="Portrait de ${this.name}"/>
             </div>
         `;
         container.innerHTML = content;

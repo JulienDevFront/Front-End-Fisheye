@@ -9,19 +9,15 @@ import { ConstructorPhotographer } from "../models/constructorPhotographer.js";
  * for photographers and display in DOM.
  */
 export const homePage = async () => {
-    try {
-        // load datas and elements
-        const photographers = await SingletonData.getPhotographers();
-        const container = document.querySelector(".mainPhotographerProfiles");
-        if (!container) throw new Error(`the container is not found`);
-        // create cards
-        const cards = photographers.map((photographer) => {
-            const photogerInstance = new ConstructorPhotographer(photographer);
-            return photogerInstance.profileCard();
-        });
-        // return cards in container
-        return container.append(...cards);
-    } catch (err) {
-        console.error(err);
-    }
+    // load datas and elements
+    const photographers = await SingletonData.getPhotographers();
+    const container = document.querySelector(".mainPhotographerProfiles");
+    if (!container) throw new Error(`the container is not found`);
+    // create cards
+    const cards = photographers.map((photographer) => {
+        const photogerInstance = new ConstructorPhotographer(photographer);
+        return photogerInstance.profileCard();
+    });
+    // return cards in container
+    return container.append(...cards);
 };

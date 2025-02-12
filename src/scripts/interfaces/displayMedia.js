@@ -1,6 +1,6 @@
 import { DataManager } from "../services/dataManager.js";
 import { MediaAdapter } from "../services/mediaAdapter.js";
-import { displayLightbox } from "./displayLightbox.js";
+import { displayLightbox } from "./displayLightBox.js";
 /** JS.DOC =>
  * - - -
  * @module displayMedia @type {ArrowFunction}
@@ -33,6 +33,12 @@ export const displayMedia = async () => {
         });
     };
 
+    container.addEventListener("focus", () => {
+        buttons.forEach((elem) => {
+            elem.style.display = "block";
+        });
+    });
+
     label.addEventListener("click", (e) => {
         e.stopPropagation();
         toggleDropdown(true);
@@ -45,8 +51,8 @@ export const displayMedia = async () => {
     });
 
     buttons.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-            selectedOption = e.target.dataset.sortName;
+        btn.addEventListener("click", (event) => {
+            selectedOption = event.target.dataset.sortName;
             media.sortMedia(selectedOption);
             media.showMedia();
             media.showSlide();
