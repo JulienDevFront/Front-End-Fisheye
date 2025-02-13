@@ -1,4 +1,4 @@
-import { focusTrap } from "./../helper/focusTrap.js";
+import { focusTrap } from "../helper/focusTrap.js";
 /** JS.DOC =>
  * - - -
  * @module displayLightbox @type {Arrowfunction}
