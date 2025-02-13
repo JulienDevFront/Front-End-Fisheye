@@ -44,36 +44,36 @@
                     <span class="PhotographerContactForm__header__title__txt">Contactez-moi</span>
                     <span id="nameProfilePhotographer" class="PhotographerContactForm__header__title__txt"></span>
                 </h2>
-                <button class="button--closeModal"></button>
+                <button class="button--closeModal" data-focus="contactForm"></button>
             </header>
             <form class="PhotographerContactForm__form">
                 <fieldset class="PhotographerContactForm__form__fieldset">
                     <label class="label-txt" for="name">Prénom</label>
-                    <input class="input-txt" type="text" name="name" placeholder="Julie, Jean .." />
+                    <input class="input-txt" type="text" name="name" data-focus="contactForm" placeholder="Julie, Jean .." />
                 </fieldset>
                 <fieldset class="PhotographerContactForm__form__fieldset">
                     <label class="label-txt" for="lastName">Nom</label>
-                    <input class="input-txt" type="text" name="lastName" placeholder="Garnier, Dubois .." />
+                    <input class="input-txt" type="text" name="lastName" data-focus="contactForm" placeholder="Garnier, Dubois .." />
                 </fieldset>
                 <fieldset class="PhotographerContactForm__form__fieldset">
                     <label class="label-txt" for="email">Email</label>
-                    <input class="input-txt" type="email" name="email" placeholder="mon.adresse@gmail.com" />
+                    <input class="input-txt" type="email" name="email" data-focus="contactForm" placeholder="mon.adresse@gmail.com" />
                 </fieldset>
                 <fieldset class="PhotographerContactForm__form__fieldset">
                     <label class="label-txt" for="message">Votre message</label>
-                    <textarea class="input-textarea" type="text-area" name="message" placeholder="Saisissez votre message .."></textarea>
+                    <textarea class="input-textarea" type="text-area" name="message" data-focus="contactForm" placeholder="Saisissez votre message .."></textarea>
                 </fieldset>
                 <fieldset class="PhotographerContactForm__form__fieldset">
-                    <input class="button--submitModal" type="submit" />
+                    <input class="button--submitModal" type="submit" data-focus="contactForm" />
                 </fieldset>
             </form>
         </aside>
         <!-- lightBox -->
         <aside id="lightBox" class="lightBox">
             <div class="lightBox__ctn">
-                <button class="button--lightBox button--closeLightBox"><img src="./assets/icons/closeModalLightBox.svg" alt="#" /></button>
-                <button class="button--lightBox button--prevLightBox"><img src="./assets/icons/arrowPrevLightBox.svg" alt="#" /></button>
-                <button class="button--lightBox button--nextLightBox"><img src="./assets/icons/arrowNextLightBox.svg" alt="#" /></button>
+                <button class="button--lightBox button--closeLightBox" data-focus="lightbox"><img src="./assets/icons/closeModalLightBox.svg" alt="#" /></button>
+                <button class="button--lightBox button--prevLightBox" data-focus="lightbox"><img src="./assets/icons/arrowPrevLightBox.svg" alt="#" /></button>
+                <button class="button--lightBox button--nextLightBox" data-focus="lightbox"><img src="./assets/icons/arrowNextLightBox.svg" alt="#" /></button>
                 <ul class="lightBox__ctn__ctn-slides">
                     <!-- medias genrate with design pattern Javascript -->
                 </ul>
@@ -90,6 +90,6 @@
                 <span class="footerBannerInfos__ctn-price__txt">€ / jour</span>
             </p>
         </footer>
-        <script type="module" src="./scripts/index.js"></script>
+        <script type="module" src="./scripts/pages/photographerPage.js"></script>
     </body>
 </html>

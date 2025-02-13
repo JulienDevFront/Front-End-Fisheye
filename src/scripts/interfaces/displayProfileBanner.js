@@ -1,5 +1,5 @@
-import { DataManager } from "../services/dataManager.js";
-import { ConstructorPhotographer } from "../models/constructorPhotographer.js";
+import { DataManager } from "./../services/dataManager.js";
+import { ConstructorPhotographer } from "./../models/constructorPhotographer.js";
 /** JS.DOC =>
  * - - -
  * @module displayProfileBanner @type {Arrow function}

@@ -1,3 +1,4 @@
+import { focusTrap } from "./../helper/focusTrap.js";
 /** JS.DOC =>
  * - - -
  * @module displayLightbox @type {Arrowfunction}
@@ -37,6 +38,7 @@ export const displayLightbox = async () => {
                 slide.style.display = "block";
             }
             HtmlElem_lightBox.style.display = "block";
+            focusTrap(HtmlElem_lightBox, "lightbox");
         });
     };
 

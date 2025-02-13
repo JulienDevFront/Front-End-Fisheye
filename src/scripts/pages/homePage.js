@@ -1,5 +1,5 @@
-import { SingletonData } from "../services/singletonData.js";
-import { ConstructorPhotographer } from "../models/constructorPhotographer.js";
+import { SingletonData } from "./../services/singletonData.js";
+import { ConstructorPhotographer } from "./../models/constructorPhotographer.js";
 /** JS.DOC =>
  * - - -
  * @module homePage @type {Arrow function}
@@ -8,9 +8,10 @@ import { ConstructorPhotographer } from "../models/constructorPhotographer.js";
  * creat  the  home page. Load the cards
  * for photographers and display in DOM.
  */
-export const homePage = async () => {
+const homePage = async () => {
     try {
         // load datas and elements
+        await SingletonData.loadData("./../../api/photographers.json");
         const photographers = await SingletonData.getPhotographers();
         const container = document.querySelector(".mainPhotographerProfiles");
         if (!container) throw new Error(`the container is not found`);
@@ -25,3 +26,4 @@ export const homePage = async () => {
         console.error(err);
     }
 };
+homePage();
