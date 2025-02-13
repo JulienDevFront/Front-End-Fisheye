@@ -14,7 +14,7 @@ import { displayLightbox } from "./../interfaces/displayLightbox.js";
  */
 const photographerPage = async () => {
     try {
-        await SingletonData.loadData("./../../../public/photographers.json");
+        await SingletonData.loadData("https://juliendevfront.github.io/Front-End-Fisheye/public/photographers.json");
         await displayProfileBanner();
         await displayContactModal();
         await displayFooterBanner();
