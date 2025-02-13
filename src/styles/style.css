@@ -293,6 +293,7 @@ li {
   z-index: 1111;
 }
 .mediaOption__label {
+  margin-top: 15px;
   font-size: 18px;
   font-weight: 700;
   color: #000000;
