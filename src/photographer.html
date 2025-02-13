@@ -4,20 +4,20 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- style import -->
-        <link rel="stylesheet" type="text/css" href="./src/styles/style.css" />
+        <link rel="stylesheet" type="text/css" href="./styles/style.css" />
         <!-- font import -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
         <!-- tab logo and page title -->
-        <link rel="icon" type="image/png" href="./src/assets/images/icons/favicon.png" />
+        <link rel="icon" type="image/png" href="./assets/images/icons/favicon.png" />
         <title>Fisheye - photographe</title>
     </head>
     <body class="body">
         <!-- header -->
         <header class="header" role="banner">
             <a class="header__linkHome" href="./index.html" aria-label="Lien vers la page d'accueil">
-                <img class="header__linkHome__img" src="./src/assets/icons/logo.png" alt="Logo de Fisheye, lien vers la page d’accueil" />
+                <img class="header__linkHome__img" src="./assets/icons/logo.png" alt="Logo de Fisheye, lien vers la page d’accueil" />
             </a>
         </header>
         <!-- main -->
@@ -28,7 +28,7 @@
                 <button class="mediaOption__label" id="sortLabel" for="listbox">Trier par</button>
                 <div class="mediaOption__select" id="listbox" role="listbox" aria-labelledby="sortLabel">
                     <div class="mediaOption__select__ctn-icon">
-                        <img class="mediaOption__select__ctn-icon__icon" src="./src/assets/icons/arrowDropDown.png" />
+                        <img class="mediaOption__select__ctn-icon__icon" src="./assets/icons/arrowDropDown.png" />
                     </div>
                     <button class="mediaOption__select__option" id="popularityOption" data-sort-name="popularity" role="option">Popularité</button>
                     <button class="mediaOption__select__option" id="dateOption" data-sort-name="date" role="option">Date</button>
@@ -44,36 +44,36 @@
                     <span class="PhotographerContactForm__header__title__txt">Contactez-moi</span>
                     <span id="nameProfilePhotographer" class="PhotographerContactForm__header__title__txt"></span>
                 </h2>
-                <button class="button--closeModal"></button>
+                <button class="button--closeModal" data-focus="contactForm"></button>
             </header>
             <form class="PhotographerContactForm__form">
                 <fieldset class="PhotographerContactForm__form__fieldset">
                     <label class="label-txt" for="name">Prénom</label>
-                    <input class="input-txt" type="text" name="name" placeholder="Julie, Jean .." />
+                    <input class="input-txt" type="text" name="name" data-focus="contactForm" placeholder="Julie, Jean .." />
                 </fieldset>
                 <fieldset class="PhotographerContactForm__form__fieldset">
                     <label class="label-txt" for="lastName">Nom</label>
-                    <input class="input-txt" type="text" name="lastName" placeholder="Garnier, Dubois .." />
+                    <input class="input-txt" type="text" name="lastName" data-focus="contactForm" placeholder="Garnier, Dubois .." />
                 </fieldset>
                 <fieldset class="PhotographerContactForm__form__fieldset">
                     <label class="label-txt" for="email">Email</label>
-                    <input class="input-txt" type="email" name="email" placeholder="mon.adresse@gmail.com" />
+                    <input class="input-txt" type="email" name="email" data-focus="contactForm" placeholder="mon.adresse@gmail.com" />
                 </fieldset>
                 <fieldset class="PhotographerContactForm__form__fieldset">
                     <label class="label-txt" for="message">Votre message</label>
-                    <textarea class="input-textarea" type="text-area" name="message" placeholder="Saisissez votre message .."></textarea>
+                    <textarea class="input-textarea" type="text-area" name="message" data-focus="contactForm" placeholder="Saisissez votre message .."></textarea>
                 </fieldset>
                 <fieldset class="PhotographerContactForm__form__fieldset">
-                    <input class="button--submitModal" type="submit" />
+                    <input class="button--submitModal" type="submit" data-focus="contactForm" />
                 </fieldset>
             </form>
         </aside>
         <!-- lightBox -->
         <aside id="lightBox" class="lightBox">
             <div class="lightBox__ctn">
-                <button class="button--lightBox button--closeLightBox" data-focus="lightBox"><img src="./src/assets/icons/closeModalLightBox.svg" alt="Fermer la modale" /></button>
-                <button class="button--lightBox button--prevLightBox" data-focus="lightBox"><img src="./src/assets/icons/arrowPrevLightBox.svg" alt="Image précédente" /></button>
-                <button class="button--lightBox button--nextLightBox" data-focus="lightBox"><img src="./src/assets/icons/arrowNextLightBox.svg" alt="Image suivante" /></button>
+                <button class="button--lightBox button--closeLightBox" data-focus="lightbox"><img src="./assets/icons/closeModalLightBox.svg" alt="#" /></button>
+                <button class="button--lightBox button--prevLightBox" data-focus="lightbox"><img src="./assets/icons/arrowPrevLightBox.svg" alt="#" /></button>
+                <button class="button--lightBox button--nextLightBox" data-focus="lightbox"><img src="./assets/icons/arrowNextLightBox.svg" alt="#" /></button>
                 <ul class="lightBox__ctn__ctn-slides">
                     <!-- medias genrate with design pattern Javascript -->
                 </ul>
@@ -83,13 +83,13 @@
         <footer class="footerBannerInfos">
             <p class="footerBannerInfos__ctn-likes">
                 <span id="footerBannerInfos__ctn-likes__number" class="footerBannerInfos__ctn-likes__number"><!-- generate with Javascript --></span>
-                <img class="footerBannerInfos__ctn-likes__icon" src="./src/assets/icons/numberLikes.svg" alt="Icon like" />
+                <img class="footerBannerInfos__ctn-likes__icon" src="./assets/icons/numberLikes.svg" alt="Icon like" />
             </p>
             <p class="footerBannerInfos__ctn-price">
                 <span id="footerBannerInfos__ctn-price__price" class="footerBannerInfos__ctn-price__price"><!-- generate with Javascript --></span>
                 <span class="footerBannerInfos__ctn-price__txt">€ / jour</span>
             </p>
         </footer>
-        <script type="module" src="./src/scripts/index.js"></script>
+        <script type="module" src="./scripts/pages/photographerPage.js"></script>
     </body>
 </html>

@@ -1,6 +1,6 @@
-import { DataManager } from "../services/dataManager.js";
-import { MediaAdapter } from "../services/mediaAdapter.js";
-import { displayLightbox } from "./displayLightBox.js";
+import { DataManager } from "./../services/dataManager.js";
+import { MediaAdapter } from "./../services/mediaAdapter.js";
+import { displayLightbox } from "./displayLightbox.js";
 /** JS.DOC =>
  * - - -
  * @module displayMedia @type {ArrowFunction}

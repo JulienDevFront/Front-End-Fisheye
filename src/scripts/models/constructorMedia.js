@@ -28,14 +28,14 @@ export class ConstructorMedia {
         const content = `
             <header class="mediaCard__header">
                 <a class="mediaCard__header__link" href="#" data-id="${this._id}">
-                    <img class="mediaCard__header__link__media--img" src="./src/assets/pictures/${this._image}" alt="${this._title} image.">
+                    <img class="mediaCard__header__link__media--img" src="./assets/pictures/${this._image}" alt="${this._title} image.">
                 </a>
             </header>
             <footer class="mediaCard__footer">
                 <h3 class="mediaCard__footer__title">${this._title}<h3/>
                 <div class="mediaCard__footer__likes">
                     <p class="mediaCard__footer__likes__number">${this._likes}</p>
-                    <img class="mediaCard__footer__likes__icon" src="./src/assets/icons/likes.svg" alt="Icon like">
+                    <img class="mediaCard__footer__likes__icon" src="./assets/icons/likes.svg" alt="Icon like">
                 </div>
             </footer>
         `;
@@ -49,7 +49,7 @@ export class ConstructorMedia {
         container.dataset.id = this._id;
         container.dataset.target = "false";
         const content = `
-            <img class="lightBox__ctn__ctn-slides__slide__media" src="./src/assets/pictures/${this._image}" alt="${this._title} image."/>
+            <img class="lightBox__ctn__ctn-slides__slide__media" src="./assets/pictures/${this._image}" alt="${this._title} image."/>
             <h3 class="lightBox__ctn__ctn-slides__slide__title">${this._title}</h3>
         `;
         container.innerHTML = content;
@@ -64,7 +64,7 @@ export class ConstructorMedia {
             <header class="mediaCard__header">
                 <a class="mediaCard__header__link" href="#" data-id="${this._id}">
                     <video controls class="mediaCard__header__link__media--video">
-                        <source src="./src/assets/videos/${this._video}" type="video/mp4"/>
+                        <source src="./assets/videos/${this._video}" type="video/mp4"/>
                     </video>
                 </a>
             </header>
@@ -72,7 +72,7 @@ export class ConstructorMedia {
                 <h3 class="mediaCard__footer__title">${this._title}<h3/>
                 <div class="mediaCard__footer__likes">
                     <p class="mediaCard__footer__likes__number">${this._likes}</p>
-                    <img class="mediaCard__footer__likes__icon" src="./src/assets/icons/likes.svg" alt="Icon like">
+                    <img class="mediaCard__footer__likes__icon" src="./assets/icons/likes.svg" alt="Icon like">
                 </div>
             </footer>
             `;
@@ -87,7 +87,7 @@ export class ConstructorMedia {
         container.dataset.target = "false";
         const content = `
             <video controls class="lightBox__ctn__ctn-slides__slide__media">
-                <source src="./src/assets/videos/${this._video}" type="video/mp4"/>
+                <source src="./assets/videos/${this._video}" type="video/mp4"/>
             </video>
             <h3 class="lightBox__ctn__ctn-slides__slide__title">${this._title}</h3>
         `;

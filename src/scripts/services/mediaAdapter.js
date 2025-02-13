@@ -1,4 +1,4 @@
-import { FactoryMedia, FactoryLightbox } from "../models/factoryMedia.js";
+import { FactoryMedia, FactoryLightbox } from "./../models/factoryMedia.js";
 /** JS.DOC =>
  * - - -
  * @module MediaAdapter @type {class}

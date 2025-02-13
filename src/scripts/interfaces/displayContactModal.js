@@ -1,4 +1,5 @@
-import { DataManager } from "../services/dataManager.js";
+import { DataManager } from "./../services/dataManager.js";
+import { focusTrap } from "./../helper/focusTrap.js";
 /** JS.DOC =>
  * - - -
  * @module displayContactModal @type {Arrow function}
@@ -18,6 +19,7 @@ export const displayContactModal = async () => {
         // Open modal
         buttonOpen.addEventListener("click", async () => {
             modal.style.display = "block";
+            focusTrap(modal, "contactForm");
             const profile = await DataManager.getProfileData();
             nameContainer.innerText = profile.name;
         });

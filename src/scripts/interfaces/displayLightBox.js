@@ -1,4 +1,4 @@
-import { focusTrap } from "../helper/focusTrap.js";
+import { focusTrap } from "./../helper/focusTrap.js";
 /** JS.DOC =>
  * - - -
  * @module displayLightbox @type {Arrowfunction}
@@ -23,9 +23,6 @@ export const displayLightbox = async () => {
     const HtmlElem_btnClose = document.querySelector(".button--closeLightBox");
     const HtmlElem_slides = document.querySelectorAll(".lightBox__ctn__ctn-slides__slide");
 
-    console.log(HtmlElem_lightBox);
-    let unsubscribeFocusTrap;
-
     const open = () => {
         HtmlElem_media.addEventListener("click", (event) => {
             const cardSelected = event.target.closest(".mediaCard");
@@ -44,15 +41,13 @@ export const displayLightbox = async () => {
             }
 
             HtmlElem_lightBox.style.display = "block";
-            // HtmlElem_btnClose.focus();
-            unsubscribeFocusTrap = focusTrap(document.querySelector(".lightBox__ctn"), "lightBox");
+            focusTrap(HtmlElem_lightBox, "lightbox");
         });
     };
 
     const close = () => {
         HtmlElem_btnClose.addEventListener("click", () => {
             HtmlElem_lightBox.style.display = "none";
-            unsubscribeFocusTrap();
         });
     };
 

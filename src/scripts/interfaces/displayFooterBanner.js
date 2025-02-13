@@ -1,4 +1,4 @@
-import { DataManager } from "../services/dataManager.js";
+import { DataManager } from "./../services/dataManager.js";
 /** JS.DOC =>
  * - - -
  * @module displayFooterBanner @type {Arrow function}

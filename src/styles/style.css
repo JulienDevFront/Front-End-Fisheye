@@ -16,11 +16,6 @@ button {
   padding: 0%;
   border: none;
   background-color: transparent;
-  outline: 2px solid transparent;
-}
-
-button:focus {
-  outline: 2px solid rgb(0, 162, 255);
 }
 
 li {
@@ -184,7 +179,7 @@ li {
 }
 
 .PhotographerContactForm {
-  position: fixed;
+  position: absolute;
   top: 5%;
   left: 50%;
   transform: translate(-50%);
