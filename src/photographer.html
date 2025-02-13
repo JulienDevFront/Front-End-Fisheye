@@ -25,14 +25,14 @@
             <section class="photogapherProfileBanner" role="contentinfo"></section>
             <!-- Drop Down Options -->
             <section class="mediaOption">
-                <button class="mediaOption__label" id="sortLabel" for="listbox">Trier par</button>
+                <button class="mediaOption__label" id="sortLabel" for="listbox" data-focus="dropdown">Trier par</button>
                 <div class="mediaOption__select" id="listbox" role="listbox" aria-labelledby="sortLabel">
                     <div class="mediaOption__select__ctn-icon">
                         <img class="mediaOption__select__ctn-icon__icon" src="./assets/icons/arrowDropDown.png" />
                     </div>
-                    <button class="mediaOption__select__option" id="popularityOption" data-sort-name="popularity" role="option">Popularité</button>
-                    <button class="mediaOption__select__option" id="dateOption" data-sort-name="date" role="option">Date</button>
-                    <button class="mediaOption__select__option" id="titleOption" data-sort-name="title" role="option">Titre</button>
+                    <button class="mediaOption__select__option" id="popularityOption" data-sort-name="popularity" role="option" data-focus="dropdown">Popularité</button>
+                    <button class="mediaOption__select__option" id="dateOption" data-sort-name="date" role="option" data-focus="dropdown">Date</button>
+                    <button class="mediaOption__select__option" id="titleOption" data-sort-name="title" role="option" data-focus="dropdown">Titre</button>
                 </div>
             </section>
             <section class="media"></section>

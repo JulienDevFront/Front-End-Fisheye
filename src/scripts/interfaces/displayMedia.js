@@ -1,6 +1,7 @@
 import { DataManager } from "./../services/dataManager.js";
 import { MediaAdapter } from "./../services/mediaAdapter.js";
 import { displayLightbox } from "./displayLightbox.js";
+import { focusTrap } from "./../helper/focusTrap.js";
 /** JS.DOC =>
  * - - -
  * @module displayMedia @type {ArrowFunction}
@@ -42,6 +43,7 @@ export const displayMedia = async () => {
     label.addEventListener("click", (e) => {
         e.stopPropagation();
         toggleDropdown(true);
+        focusTrap(container, "dropdown");
     });
 
     document.addEventListener("click", (event) => {
