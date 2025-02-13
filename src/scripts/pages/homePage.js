@@ -11,7 +11,7 @@ import { ConstructorPhotographer } from "./../models/constructorPhotographer.js"
 const homePage = async () => {
     try {
         // load datas and elements
-        await SingletonData.loadData("./../../api/photographers.json");
+        await SingletonData.loadData("./../../../public/photographers.json");
         const photographers = await SingletonData.getPhotographers();
         const container = document.querySelector(".mainPhotographerProfiles");
         if (!container) throw new Error(`the container is not found`);

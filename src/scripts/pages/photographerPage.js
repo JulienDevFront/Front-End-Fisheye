@@ -14,7 +14,7 @@ import { displayLightbox } from "./../interfaces/displayLightbox.js";
  */
 const photographerPage = async () => {
     try {
-        await SingletonData.loadData("./../../api/photographers.json");
+        await SingletonData.loadData("./../../../public/photographers.json");
         await displayProfileBanner();
         await displayContactModal();
         await displayFooterBanner();
