@@ -43,24 +43,28 @@ export class DataManager {
         else return totalLikes;
     }
 
-    static async updateLikesProfile(container, btn, likes) {
+    static updateLikesProfile(container, btn, likes) {
         const btnLikes = container.querySelector(`.${btn}`);
         const valueLikes = container.querySelector(`.${likes}`);
         const totalDisplay = document.querySelector("#footerBannerInfos__ctn-likes__number");
 
         let value = Number(valueLikes.textContent);
-        btnLikes.removeEventListener("click", btnLikes.clickHandler);
+        let isLiked = false;
 
-        btnLikes.clickHandler = async (event) => {
+        btnLikes.addEventListener("click", (event) => {
             event.stopPropagation();
-            value += 1;
-            valueLikes.textContent = value;
-            totalDisplay.textContent = Number(totalDisplay.textContent) + 1;
-            // console.log("new value :", value);
-            // console.log("new total :", totalDisplay.textContent);
-        };
+            if (!isLiked) {
+                value += 1;
+                totalDisplay.textContent = Number(totalDisplay.textContent) + 1;
+            } else {
+                value -= 1;
+                totalDisplay.textContent = Number(totalDisplay.textContent) - 1;
+            }
 
-        btnLikes.addEventListener("click", btnLikes.clickHandler);
+            valueLikes.textContent = value;
+            // toggle state at each event
+            isLiked = !isLiked;
+        });
     }
 
     static async getPriceProfile() {
