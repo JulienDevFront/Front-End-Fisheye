@@ -7,10 +7,11 @@ import { SingletonData } from "./singletonData.js";
  * provides methods to  retrieve a photographer's profile, filter associated media based on
  * the current URL parameters, and sort media based on different criteria.
  * - - -
- * @static @method searchProfile() Get photographer data based on URL parameters.
- * @static @method searchProfileMedia() Filter media based on photographer's ID from the URL.
- * @static @method getCountLikesProfile() Count the number total of likes of photographe.
- * @static @method getPriceProfile() Get the price day of the photographer.
+ * @static @method searchProfile()
+ * @static @method searchProfileMedia()
+ * @static @method getCountLikesProfile()
+ * @static @method updateLikesProfile()
+ * @static @method getPriceProfile()
  */
 export class DataManager {
     constructor() {}
@@ -32,12 +33,34 @@ export class DataManager {
         return filterMedia;
     }
 
-    static async getCountLikesProfile() {
-        let count = [];
+    static async getCountLikesProfile(likes) {
+        let totalLikes = 0;
         const media = await DataManager.getProfileMediaData();
-        media.forEach((elem) => count.push(elem.likes));
-        const counter = count.reduce((acc, currentValue) => acc + currentValue);
-        return counter;
+        media.forEach((elem) => {
+            totalLikes += elem.likes;
+        });
+        if (likes) return totalLikes + likes;
+        else return totalLikes;
+    }
+
+    static async updateLikesProfile(container, btn, likes) {
+        const btnLikes = container.querySelector(`.${btn}`);
+        const valueLikes = container.querySelector(`.${likes}`);
+        const totalDisplay = document.querySelector("#footerBannerInfos__ctn-likes__number");
+
+        let value = Number(valueLikes.textContent);
+        btnLikes.removeEventListener("click", btnLikes.clickHandler);
+
+        btnLikes.clickHandler = async (event) => {
+            event.stopPropagation();
+            value += 1;
+            valueLikes.textContent = value;
+            totalDisplay.textContent = Number(totalDisplay.textContent) + 1;
+            // console.log("new value :", value);
+            // console.log("new total :", totalDisplay.textContent);
+        };
+
+        btnLikes.addEventListener("click", btnLikes.clickHandler);
     }
 
     static async getPriceProfile() {

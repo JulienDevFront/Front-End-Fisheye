@@ -43,7 +43,7 @@ export const displayMedia = async () => {
     label.addEventListener("click", (e) => {
         e.stopPropagation();
         toggleDropdown(true);
-        focusTrap(container, "dropdown");
+        focusTrap(container, "dropdown", 2);
     });
 
     document.addEventListener("click", (event) => {

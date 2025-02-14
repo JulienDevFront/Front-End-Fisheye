@@ -1,3 +1,6 @@
+// import { DataManager } from "./../services/dataManager.js";
+// import { displayFooterBanner } from "./../interfaces/displayFooterBanner.js";
+import { DataManager } from "./../services/dataManager.js";
 /** JS.DOC =>
  * - - -
  * @module ConstructorMedia @type {class}
@@ -30,16 +33,19 @@ export class ConstructorMedia {
                 <a class="mediaCard__header__link" href="#" data-id="${this._id}">
                     <img class="mediaCard__header__link__media--img" src="./assets/pictures/${this._image}" alt="${this._title} image.">
                 </a>
-            </header>
+        ;    </header>
             <footer class="mediaCard__footer">
-                <h3 class="mediaCard__footer__title">${this._title}<h3/>
+                <h3 class="mediaCard__footer__title">${this._title}</h3>
                 <div class="mediaCard__footer__likes">
                     <p class="mediaCard__footer__likes__number">${this._likes}</p>
-                    <img class="mediaCard__footer__likes__icon" src="./assets/icons/likes.svg" alt="Icon like">
+                    <button class="mediaCard__footer__likes__number__btn" aria-label="liker">
+                        <img class="mediaCard__footer__likes__number__btn__icon" src="./assets/icons/likes.svg" alt="like">
+                    </button>
                 </div>
             </footer>
         `;
         container.innerHTML = content;
+        DataManager.updateLikesProfile(container, "mediaCard__footer__likes__number__btn", "mediaCard__footer__likes__number");
         return container;
     }
 
@@ -72,11 +78,14 @@ export class ConstructorMedia {
                 <h3 class="mediaCard__footer__title">${this._title}<h3/>
                 <div class="mediaCard__footer__likes">
                     <p class="mediaCard__footer__likes__number">${this._likes}</p>
-                    <img class="mediaCard__footer__likes__icon" src="./assets/icons/likes.svg" alt="Icon like">
+                    <button class="mediaCard__footer__likes__number__btn"  aria-label="liker">
+                        <img class="mediaCard__footer__likes__number__btn__icon" src="./assets/icons/likes.svg" alt="like">
+                    </button>
                 </div>
             </footer>
             `;
         container.innerHTML = content;
+        DataManager.updateLikesProfile(container, "mediaCard__footer__likes__number__btn", "mediaCard__footer__likes__number");
         return container;
     }
 

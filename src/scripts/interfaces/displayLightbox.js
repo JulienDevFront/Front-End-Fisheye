@@ -41,7 +41,7 @@ export const displayLightbox = async () => {
             }
 
             HtmlElem_lightBox.style.display = "block";
-            focusTrap(HtmlElem_lightBox, "lightbox");
+            focusTrap(HtmlElem_lightBox, "lightbox", 1);
         });
     };
 

@@ -14,12 +14,14 @@ export const displayContactModal = async () => {
     const buttonClose = document.querySelector(".button--closeModal");
     const buttonSubmit = document.querySelector(".button--submitModal");
     const nameContainer = document.querySelector("#nameProfilePhotographer");
+    const inputs = document.querySelectorAll(`input[type="text"], input[type="email"], textarea[type="text-area"]`);
 
     if (buttonOpen && buttonClose && buttonSubmit && modal && nameContainer) {
         // Open modal
         buttonOpen.addEventListener("click", async () => {
             modal.style.display = "block";
-            focusTrap(modal, "contactForm");
+            focusTrap(modal, "contactForm", 1);
+
             const profile = await DataManager.getProfileData();
             nameContainer.innerText = profile.name;
         });
@@ -30,6 +32,11 @@ export const displayContactModal = async () => {
         // close modal
         buttonSubmit.addEventListener("click", (e) => {
             e.preventDefault();
+            inputs.forEach((elem) => {
+                console.log(`Value of input of element ${elem.type} : ${elem.value}`);
+                elem.value = "";
+            });
+
             modal.style.display = "none";
         });
     } else {

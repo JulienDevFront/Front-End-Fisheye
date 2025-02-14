@@ -21,7 +21,7 @@ export class ConstructorPhotographer {
         container.setAttribute("class", "photographerProfileCard");
         container.setAttribute("aria-labelledby", `photographer-${this.id}`);
         const content = `
-            <header class="photographerProfileCard__header" role="banner" aria-label="Banner du photographe ${this.name}">
+            <header class="photographerProfileCard__header" aria-label="Banner du photographe ${this.name}">
                 <a href="./photographer.html?id=${this.id}" class="photographerProfileCard__header__link" aria-label="Voir le profil de ${this.name}">
                     <img src="./assets/pictures/${this.portrait}" class="photographerProfileCard__header__link__img" alt="Portrait de ${this.name}"/>
                     <h2 id="photographer-${this.id}" class="photographerProfileCard__header__link__title">${this.name}</h2>

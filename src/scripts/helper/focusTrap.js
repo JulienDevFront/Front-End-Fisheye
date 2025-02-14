@@ -6,11 +6,12 @@
  * element  navigation with the data-focus
  * attribute for the keyboard tab key
  */
-export const focusTrap = (container, datafocus) => {
+export const focusTrap = (container, datafocus, indexFocus) => {
     const elems = container.querySelectorAll(`[data-focus="${datafocus}"]`);
     const firstElem = elems[0];
     const lastElem = elems[elems.length - 1];
-    firstElem.focus();
+    const firstFocus = elems[indexFocus];
+    firstFocus.focus();
 
     elems.forEach((elem) => {
         elem.addEventListener("keydown", (event) => {

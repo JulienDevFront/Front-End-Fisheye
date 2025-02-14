@@ -17,9 +17,9 @@ const photographerPage = async () => {
         await SingletonData.loadData("https://juliendevfront.github.io/Front-End-Fisheye/public/photographers.json");
         await displayProfileBanner();
         await displayContactModal();
-        await displayFooterBanner();
         await displayMedia();
         await displayLightbox();
+        await displayFooterBanner();
     } catch (err) {
         console.log(err);
     }
